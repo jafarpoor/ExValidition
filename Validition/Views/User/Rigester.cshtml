@@ -1,0 +1,29 @@
+﻿@model Validition.Models.Entities.User
+
+@{
+    ViewData["Title"] = "Rigester";
+}
+
+<h1>ثبت نام کاربر</h1>
+
+<form asp-action="Rigester" method="post">
+    <label asp-for="Email">Email</label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <br />
+    <label asp-for="Age">Age</label>
+    <input asp-for="Age" />
+    <span asp-validation-for="Age" class="text-danger"></span>
+    <br />
+    <button>ثبت نام</button>
+
+</form>
+
+@section  Scripts{
+
+@{ 
+    Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+
+}
+
